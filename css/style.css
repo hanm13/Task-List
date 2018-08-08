@@ -182,7 +182,6 @@ footer {
   top: 10%;
   bottom: 0;
   width: 80%;
-  height: 80%;
 	/*border: 3px solid blue;*/
 	flex-wrap: wrap;
 	overflow: hidden;
@@ -196,7 +195,7 @@ footer {
 		background-repeat: no-repeat;
     position: relative;
 		width: 15%;
-		height: 100%;
+		height: 70%;
 		margin : 0;
     left: 1%;
 
@@ -228,7 +227,6 @@ footer {
 .noteBoxDate{
 
 		position: relative;
-    top: 15%;
     color: black;
     padding: 5px;
 

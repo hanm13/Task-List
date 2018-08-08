@@ -10,8 +10,6 @@ function saveTaskToLocalStorage(task,date){
 
 	if (!GetTasksFromLocalStorage()){
 
-		console.log("Creating new task key"); // DEBUG
-
 		tasks =
 			 [
 				 task
@@ -20,19 +18,13 @@ function saveTaskToLocalStorage(task,date){
 
 		localStorage.setItem("tasks", JSON.stringify(tasks));
 
-		console.log(GetTasksFromLocalStorage()); // DEBUG
-
 	}else{
-
-		console.log("Adding task object to tasks array."); // DEBUG
 
 		tasks = GetTasksFromLocalStorage();
 
 		tasks.unshift(task);
 
 		localStorage.setItem("tasks", JSON.stringify(tasks));
-
-		console.log(tasks); //DEBUG
 
 	}
 
@@ -41,11 +33,6 @@ function saveTaskToLocalStorage(task,date){
 }
 
 function removeTaskFromLocalStorage(taskid){
-
-	console.log("Function called : removeTaskFromLocalStorage"); //debug
-	//
-	console.log("Local Storge before removal of item"); // DEBUG
-	console.log(GetTasksFromLocalStorage()); // DEBUG
 
 	var tasks = GetTasksFromLocalStorage();
 
@@ -61,8 +48,6 @@ function removeTaskFromLocalStorage(taskid){
 	}
 
 	localStorage.setItem("tasks", JSON.stringify(tasks));
-	console.log("Local Storge after removal of item"); // DEBUG
-	console.log(GetTasksFromLocalStorage()); // DEBUG
 
 	removeTaskDiv(taskid);
 
@@ -128,7 +113,7 @@ function addTaskDiv(task,i,reload){
 			div_el.style.backgroundImage = "url('./images/notebg.png')";
 			div_el.style.backgroundRepeat = "no-repeat";
 
-			var textArea = document.createElement("textarea");
+			var textArea = document.createElement("div");
 				textArea.innerHTML = task.description;
 				textArea.id = "noteBoxTextArea"+i;
 				textArea.className = "noteBoxDescription";
@@ -260,16 +245,6 @@ document.getElementById("saveButton").addEventListener("click", function(){
 
 	}
 
-
-
-	/*if (GetTasksFromLocalStorage().length >= 5){
-
-		addErrorMessage("You have exceeded the amount(5) allowed for notes!","errorExceededMax");
-
-		formErrors = formErrors + 1;
-
-	}*/
-
 	if(formErrors > 0){
 
 		return
@@ -285,8 +260,6 @@ document.getElementById("saveButton").addEventListener("click", function(){
 });
 
 document.addEventListener("DOMContentLoaded", function(){
-    console.log(GetTasksFromLocalStorage()); //DEBUG
-
 	// Load tasks from LocalStorage and create the divs inside the flex box.
 
 		reloadTasks()
