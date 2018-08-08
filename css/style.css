@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body {
-	background-image: url("https://www.combinecontrol.com/jb/project_tasklist/images/background.jpg");
+	background-image: url("../images/background.jpg");
 	background-repeat: repeat;
 	color: white;
 	background-attachment: fixed;
@@ -121,7 +121,7 @@ footer {
     position: relative;
     margin: 0 auto;
     top: 15%;
-    background-image: url("https://www.combinecontrol.com/jb/project_tasklist/images/formbg.jpg");
+    background-image: url("../images/formbg.jpg");
     background-repeat: repeat;
     background-position-x: 60px;
     color: white;
@@ -192,7 +192,7 @@ footer {
 .noteBoxPanels{
 
 
-		background-image:url('https://www.combinecontrol.com/jb/project_tasklist/images/notebg.png');
+		background-image:url('../images/notebg.png');
 		background-repeat: no-repeat;
     position: relative;
 		width: 15%;

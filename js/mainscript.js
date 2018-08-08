@@ -125,7 +125,7 @@ function addTaskDiv(task,i,reload){
 		var div_el = document.createElement("div");
 			div_el.id = "noteBox"+i;
 			div_el.className = "noteBoxPanels";
-			div_el.style.backgroundImage = "url('https://www.combinecontrol.com/jb/project_tasklist/images/notebg.png')";
+			div_el.style.backgroundImage = "url('./images/notebg.png')";
 			div_el.style.backgroundRepeat = "no-repeat";
 
 			var textArea = document.createElement("textarea");
