@@ -1,0 +1,49 @@
+<html>
+
+	<head>
+
+		<title>My Task Board</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Oswald:300|Open+Sans+Condensed:300|Open+Sans" type="text/css" media="screen">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<img class="head-logo" src="images/title.png" alt="logo">
+
+		<form id="taskForm">
+
+		  <input type="text" required id ="dateInput" placeholder="DD/MM/YYYY" name="Date" value="" class="formInput">
+
+
+		  <div id="taskTextAreaBox">
+
+			  <textarea required rows="37"  id = "taskTextAreaInput" placeholder="Task" cols="80" class="formInput"></textarea>
+
+		  </div>
+
+			<input type="button" value= "Save task" id = "saveButton">
+
+			<div id ="errorsBox"></div>
+
+		</form>
+
+		<div id ="task_listBox">
+
+			<div id="task_listFlex"></div>
+
+		</div>
+
+		<script src = "js/mainscript.js"> </script>
+
+	</body>
+
+
+
+
+</html>
